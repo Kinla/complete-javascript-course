@@ -93,3 +93,12 @@ if (john.calcBMI() > mark.calcBMI()){
     console.log("Mark has a higher BMI. His BMI is " + mark.BMI);
 } else console.log("They have the same BMI.")
 *********************************************/
+
+/* LOOPING BACKWARDS
+var john = ["John", "Smith", 1990, "designer", false, "blue"];
+console.log(john);
+for (var i = john.length - 1; i >= 0; i--){
+    console.log(john[i]);
+}
+*********************************************/
+
