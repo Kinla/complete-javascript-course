@@ -102,3 +102,74 @@ for (var i = john.length - 1; i >= 0; i--){
 }
 *********************************************/
 
+/* 2nd TIPS CHALLENGE
+var john = {
+    bills: [124, 48, 268, 180, 42],
+    tips: [],
+    calcTips: function (){
+        for (var i = 0; i < this.bills.length; i++){
+            if (this.bills[i] < 50){
+                this.tips[i] = this.bills[i] * .2
+            } else if ( this.bills[i] >= 50 && this.bills[i] < 200){
+                this.tips[i] = this.bills[i] * .15
+            } else {
+                this.tips[i] = this.bills[i] * .1
+            }
+            this.tips.push(this.calcTips);
+        }
+    },
+    finalBills: [],
+    calcFinalBills: function (){
+        for (var i = 0; i < this.bills.length; i++){
+            this.finalBills[i] = this.bills[i] + this.tips[i]
+
+        };
+    },
+};
+john.calcTips();
+john.calcFinalBills();
+
+console.log(john.tips, john.finalBills);
+
+var mark = {
+    bills: [77, 375, 110, 45],
+    tips: [],
+    calcTips: function (){
+        for (var i = 0; i < this.bills.length; i++){
+            if (this.bills[i] < 100){
+                this.tips[i] = this.bills[i] * .2
+            } else if ( this.bills[i] >= 100 && this.bills[i] < 300){
+                this.tips[i] = this.bills[i] * .1
+            } else {
+                this.tips[i] = this.bills[i] * .25
+            }
+            this.tips.push(this.calcTips);
+        }
+    },
+    finalBills: [],
+    calcFinalBills: function (){
+        for (var i = 0; i < this.bills.length; i++){
+            this.finalBills[i] = this.bills[i] + this.tips[i]
+
+        };
+    },
+};
+mark.calcTips();
+mark.calcFinalBills();
+
+console.log(mark.tips, mark.finalBills);
+
+
+var calcAvgTip = function(tipsArr){
+    var sumOfTips = 0;
+    for (var i = 0; i < tipsArr.length - 1; i++){
+        sumOfTips = sumOfTips + tipsArr[i];
+    }
+    return sumOfTips / tipsArr.length;
+};
+
+john.avgTip = calcAvgTip(john.tips);
+mark.avgTip = calcAvgTip(mark.tips);
+console.log(john.avgTip, mark.avgTip);
+*********************************************/
+
