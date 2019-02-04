@@ -102,7 +102,7 @@ for (var i = john.length - 1; i >= 0; i--){
 }
 *********************************************/
 
-/* 2nd TIPS CHALLENGE
+/* 2nd TIPS CHALLENGE */
 var john = {
     bills: [124, 48, 268, 180, 42],
     tips: [],
@@ -115,7 +115,7 @@ var john = {
             } else {
                 this.tips[i] = this.bills[i] * .1
             }
-            this.tips.push(this.calcTips);
+            this.tips.push(this.calcTips(););
         }
     },
     finalBills: [],
@@ -143,7 +143,7 @@ var mark = {
             } else {
                 this.tips[i] = this.bills[i] * .25
             }
-            this.tips.push(this.calcTips);
+            this.tips.push(this.calcTips());
         }
     },
     finalBills: [],
@@ -171,5 +171,5 @@ var calcAvgTip = function(tipsArr){
 john.avgTip = calcAvgTip(john.tips);
 mark.avgTip = calcAvgTip(mark.tips);
 console.log(john.avgTip, mark.avgTip);
-*********************************************/
+/*********************************************/
 
