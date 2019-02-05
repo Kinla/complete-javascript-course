@@ -115,7 +115,7 @@ var john = {
             } else {
                 this.tips[i] = this.bills[i] * .1
             }
-            this.tips.push(this.calcTips(););
+            this.tips.push(this.calcTips);
         }
     },
     finalBills: [],
@@ -143,7 +143,7 @@ var mark = {
             } else {
                 this.tips[i] = this.bills[i] * .25
             }
-            this.tips.push(this.calcTips());
+            this.tips.push(this.calcTips);
         }
     },
     finalBills: [],
